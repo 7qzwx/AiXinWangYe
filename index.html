@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>佳期永远在这里</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佳期爱心</title>
     <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-        background: #000;
-      }
-      canvas {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-      #pinkboard {
-        animation: anim 1.5s ease-in-out infinite;
-        -webkit-animation: anim 1.5s ease-in-out infinite;
-        -o-animation: anim 1.5s ease-in-out infinite;
-        -moz-animation: anim 1.5s ease-in-out infinite;
-      }
-      @keyframes anim {
-        0% {
-          transform: scale(0.8);
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            font-family: '微软雅黑', sans-serif;
         }
-        25% {
-          transform: scale(0.7);
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
-        50% {
-          transform: scale(1);
+        #name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px; /* Adjust font size for mobile */
+            color: #ea80b0;
         }
-        75% {
-          transform: scale(0.7);
+        #contentToWrite {
+            font-size: 18px; /* Adjust font size for mobile */
+            position: absolute;
+            left: 50%;
+            top: 47%;
+            transform: translate(-50%, 0);
         }
-        100% {
-          transform: scale(0.8);
+        @media (min-width: 768px) {
+            #name {
+                font-size: 46px; /* Larger font size for tablets and desktops */
+            }
+            #contentToWrite {
+                font-size: 30px; /* Larger font size for tablets and desktops */
+            }
         }
-      }
-      #name {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: -20px;
-        font-size: 46px;
-        color: #ea80b0;
-      }
-      #contentToWrite {
-        font-size: 30px;
-        position: absolute;
-        left: 50%;
-        top: 47%;
-        transform: translate(-48%, 0);
-      }
     </style>
     <script>
-      var shouci = true;
-      function bodyPlayMusic() {
-        if (shouci) {
-          shouci = false;
-          audio.play();
+        var shouci = true;
+        function bodyPlayMusic() {
+            if (shouci) {
+                shouci = false;
+                audio.play();
+            }
         }
-      }
     </script>
-  </head>
   <body>
     <div id="contentToWrite" class="comments" style="color: pink">
       佳期永存此❤️
